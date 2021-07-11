@@ -1,7 +1,0 @@
-USE sql_inventory;
-SELECT *
-FROM products
-WHERE unit_price>2
-ORDER BY quantity_in_stock
-
---we may or may not use FROM, WHERE and ORDER BY but the order should always remain same
