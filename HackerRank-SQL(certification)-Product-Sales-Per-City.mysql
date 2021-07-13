@@ -1,0 +1,7 @@
+select city.city_name,product.product_name,round(invoice_item.line_total_price,2)
+from city
+inner join customer on city.id=customer.city_id
+inner join invoice on customer.id=invoice.customer_id
+inner join invoice_item on invoice.id=invoice_item.invoice_id
+inner join product on product.id=invoice_item.product_id
+order by invoice.total_price desc , city.city_name , product.product_name
